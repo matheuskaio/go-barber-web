@@ -33,12 +33,11 @@ export default function Dashboard() {
       const response = await api.get('schedule', {
         params: { date },
       });
-      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
+      // const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const timezone = '2020-04-11 02:59:59.999';
       const data = range.map(hour => {
         const checkDate = setSeconds(setMinutes(setHours(date, hour), 0), 0);
         const compareDate = utcToZonedTime(checkDate, timezone);
-
         return {
           time: `${hour}:00h`,
           past: isBefore(compareDate, new Date()),

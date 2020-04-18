@@ -27,7 +27,7 @@ export default function Header() {
             <img
               src={
                 profile.avatar.url ||
-                'https://api.adorable.io/avatars/50/abott@adorable.png'
+                'https://api.adorable.io/avatar/50/teste.png'
               }
               alt="Matheus Kaio"
             />
